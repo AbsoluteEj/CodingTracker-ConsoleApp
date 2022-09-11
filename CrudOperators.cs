@@ -3,7 +3,7 @@ using System;
 
 namespace CodingTracker_ConsoleApp
 {
-	 public class CrudOperators
+	 public class CrudOperators : MainMenu
 	{
 		// Insert or Create data to database
 		string connectionString = @"Data Source=CodingTracker.db";

@@ -7,10 +7,6 @@ namespace CodingTracker_ConsoleApp
     {
         static void Main(string[] args)
         {
-            // Welcome UI
-            Console.WriteLine("Coding Tracker Console App");
-            Console.WriteLine("Track your coding hours and be productive!");
-            Console.ReadLine();
 
             // Database Creation (can include in CrudOperators class i think if not work)
             using (var connection = new SqliteConnection(@"Data Source=CodingTracker.db"))
@@ -28,6 +24,14 @@ namespace CodingTracker_ConsoleApp
                 trackerCmd.ExecuteNonQuery();
                 connection.Close();
             }
+
+            // Welcome UI
+            Console.WriteLine("Coding Tracker Console App");
+            Console.WriteLine("Track your coding hours and be productive!");
+            Console.ReadLine();
+
+            // Call Main Menu
+
 
             // Call CRUD Operations Class
 
