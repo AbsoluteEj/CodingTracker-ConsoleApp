@@ -3,7 +3,7 @@ using System;
 
 namespace CodingTracker_ConsoleApp
 {
-	 public class CrudOperators : MainMenu
+	 public class CrudController : MainMenu, UserInput
 	{
 		// Insert or Create data to database
 		string connectionString = @"Data Source=CodingTracker.db";
@@ -15,7 +15,7 @@ namespace CodingTracker_ConsoleApp
                 var trackerCmd = connection.CreateCommand();
 
                 trackerCmd.CommandText =
-                    $"INSERT INTO coding_tracker VALUES ();
+                    $"INSERT INTO coding_tracker VALUES ()"; // inherit from MainMenu class
 
 
 				trackerCmd.ExecuteNonQuery();
@@ -41,5 +41,18 @@ namespace CodingTracker_ConsoleApp
 				}
 			}
 		}
+
+		public void Update()
+		{
+			Console.Clear();
+			Console.WriteLine("Select the Id of the record you want to update.\n");
+
+			using(resource)
+			{
+
+			}
+		}
+
+
 	}
 }
